@@ -8,8 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+@interface NSNumber (FPExtension)
+
+- (NSArray*)times:(id)obj;
+
+- (NSArray*)to:(NSNumber*)numb;
+
+@end
+
 @interface NSArray (FPExtension)
 
 - (NSArray*)map:(id(^)(id obj))mapBlock;
+
+- (NSArray*)flattenMap:(NSArray*(^)(id obj))mapBlock;
 
 @end

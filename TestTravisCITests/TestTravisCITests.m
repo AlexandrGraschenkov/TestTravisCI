@@ -11,8 +11,8 @@
 
 SPEC_BEGIN(FPExtensions)
 
-describe(@"Array", ^{
-    context(@"@[@1, @2, @3]", ^{
+describe(@"[Array", ^{
+    context(@"map:]", ^{
         let(arr, ^id{
             return @[@1, @2, @3];
         });
@@ -27,7 +27,21 @@ describe(@"Array", ^{
         });
         
         it(@"after map should have NSArray type", ^{
-            [[mutArr should] beKindOfClass:[NSArray class]];
+            [[[mutArr map:^id(id obj) {
+                return obj;
+            }] should] beKindOfClass:[NSArray class]];
+        });
+    });
+    
+    context(@"flattenMap:]", ^{
+        let(arr, ^id{
+            return @[@1, @2, @3];
+        });
+        
+        it(@"should pass simple test", ^{
+            [[[arr flattenMap:^NSArray *(NSNumber *obj) {
+                return [obj times:obj];
+            }] should] equal:@[@1, @2, @2, @3, @3, @3]];
         });
     });
 });
