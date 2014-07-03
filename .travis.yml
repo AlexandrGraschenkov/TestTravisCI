@@ -15,7 +15,7 @@ after_script:
 - scripts/remove-key.sh
 script:
 - xctool -workspace TestTravisCI.xcworkspace -scheme TestTravisCI -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-- xctool test -workspace TestTravisCI.xcworkspace -scheme TestTravisCI -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- xctool test -workspace TestTravisCI.xcworkspace -scheme TestTravisCI -sdk iphoneos ONLY_ACTIVE_ARCH=NO
 after_success:
 - xctool -workspace TestTravisCI.xcworkspace -scheme TestTravisCI -sdk iphoneos -configuration Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
 - scripts/sign.sh
