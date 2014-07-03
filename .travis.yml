@@ -1,11 +1,10 @@
 language: objective-c
 xcode_workspace: TestTravisCI.xcworkspace
 xcode_scheme: TestTravisCI
-before_install:
-- gem install cocoapods
-- brew update
-- brew upgrade xctool
-- xctool --version
+before_install: gem install cocoapods
+before_script:
+- chmod +x scripts/before_script.sh
+- scripts/before_script.sh
 script:
 - xctool -workspace TestTravisCI.xcworkspace -scheme TestTravisCI -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 - xctool test -workspace TestTravisCI.xcworkspace -scheme TestTravisCI -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
