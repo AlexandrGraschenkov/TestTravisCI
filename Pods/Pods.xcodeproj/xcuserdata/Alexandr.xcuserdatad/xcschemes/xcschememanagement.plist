@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-TestTravisCITests-Kiwi.xcscheme</key>
+		<key>Pods-TestTravisCITests-Kiwi.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-TestTravisCITests.xcscheme</key>
+		<key>Pods-TestTravisCITests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
