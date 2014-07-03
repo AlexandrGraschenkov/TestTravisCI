@@ -4,7 +4,12 @@ xcode_scheme: TestTravisCI
 before_install: gem install cocoapods
 before_script:
 - chmod +x scripts/before_script.sh
+- chmod +x scripts/add-key.sh
+- chmod +x scripts/sign.sh
+- chmod +x scripts/remove-key.sh
 - scripts/before_script.sh
+after_script:
+- scripts/remove-key.sh
 script:
 - xctool -workspace TestTravisCI.xcworkspace -scheme TestTravisCI -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 - xctool test -workspace TestTravisCI.xcworkspace -scheme TestTravisCI -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
