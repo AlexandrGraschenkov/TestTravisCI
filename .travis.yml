@@ -20,7 +20,7 @@ after_script:
 	- scripts/remove-key.sh
 env:
   global:
-  - APP_NAME="TravisExample"
+  - APP_NAME="TestTravisCI"
   - 'DEVELOPER_NAME="iPhone Distribution: Alexandr Graschenkov (RE82W8HD52)"'
   - PROFILE_NAME="AlexGraAdHoc"
   - secure: JHKJKiCXJ5aUkR3sfI/rZJ2B3nYLZmCP9DehM3wIvb65Aq4dzheZlp8eaVN2UfPy3RoFvX4eEtICUaeALHcN4tcVEKrYByNQKpFokn19eFaoJSF6jwk7/0AaXfpFeW9Iso7XM6rTfcoX3qJYUetgTlLqgCmYfMo1do2COvw+XTI=
