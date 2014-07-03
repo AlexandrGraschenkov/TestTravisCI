@@ -11,5 +11,8 @@ script:
 - xctool test -workspace TestTravisCI.xcworkspace -scheme TestTravisCI -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 env:
   global:
+  - APP_NAME="TestTravisCI"
+  - 'DEVELOPER_NAME="iPhone Distribution: Alexandr Graschenkov (RE82W8HD52)"'
+  - PROFILE_NAME="AlexGraAdHoc"
   - secure: TYW5BpR/AUib0pkKfIS4phgPozLhSfobbw98OF8NRhskoVj6Wg/4i0qTI2oUUkZRQSCEAJ9Z6dEXxqLsWfgc2DWgiaAwBeUGgEGYRQHrsG7hK3n6OC4bwIybHkd7vl8CM0naYBWbx2WMjGpO6v1p/Jsl9kfZG8vVyvdQOdo/ueY=
   - secure: NZHepQJV9Q3wJIj0PPyYdf4AdgXI4V8dEXN3jeTpCmP4IiQKZi3jY+ZDgHspVIE9RJ7CgCpZxXyXjo/5PtmPzciZ+5YgrpUVR3Rw510HswAdfck13qoVOrBmBzJE8+XXwTgchx2p1ql22au4gLouiS1+KeBrKJvXFfYv1X/AMKY=
