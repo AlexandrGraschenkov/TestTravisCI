@@ -3,6 +3,9 @@ xcode_workspace: TestTravisCI.xcworkspace
 xcode_scheme: TestTravisCI
 before_install: gem install cocoapods
 before_script:
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/AlexGraAdHoc.mobileprovision.enc -d -a -out scripts/profile/AlexGraAdHoc.mobileprovision
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/cert/dist.cer.enc -d -a -out scripts/cert/dist.cer
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/cert/dist.p12.enc -d -a -out scripts/cert/dist.p12
 - chmod +x scripts/before_script.sh
 - chmod +x scripts/add-key.sh
 - chmod +x scripts/sign.sh
@@ -20,3 +23,4 @@ env:
   - PROFILE_NAME="AlexGraAdHoc"
   - secure: TYW5BpR/AUib0pkKfIS4phgPozLhSfobbw98OF8NRhskoVj6Wg/4i0qTI2oUUkZRQSCEAJ9Z6dEXxqLsWfgc2DWgiaAwBeUGgEGYRQHrsG7hK3n6OC4bwIybHkd7vl8CM0naYBWbx2WMjGpO6v1p/Jsl9kfZG8vVyvdQOdo/ueY=
   - secure: NZHepQJV9Q3wJIj0PPyYdf4AdgXI4V8dEXN3jeTpCmP4IiQKZi3jY+ZDgHspVIE9RJ7CgCpZxXyXjo/5PtmPzciZ+5YgrpUVR3Rw510HswAdfck13qoVOrBmBzJE8+XXwTgchx2p1ql22au4gLouiS1+KeBrKJvXFfYv1X/AMKY=
+  - secure: PJ62qyo9H2NquKtknl1T22GFLYpiUJZFxco5k2a4Fp5E8xSDP6iEELanJeDS+iyMgL9Hpl4PRokf78SBv8bmJMbdS6CoShciCVroCqytgLXPnaJyQOneFB4VECHNzn2cqeZt9VsG3DW07U+WskDxM+1zMGd7u0YfjMMwXDi10Kc=
