@@ -1,5 +1,6 @@
 language: objective-c
+xcode_workspace: TestTravisCI.xcworkspace # path to your xcodeproj folder
+xcode_scheme: TestTravisCI
 script:
   - xctool -workspace TestTravisCI.xcworkspace -scheme TestTravisCI -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
   - xctool test -workspace TestTravisCI.xcworkspace -scheme TestTravisCI -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-  
