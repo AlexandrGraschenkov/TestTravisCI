@@ -1,0 +1,26 @@
+language: objective-c
+xcode_workspace: TestTravisCI.xcworkspace
+xcode_scheme: TestTravisCI
+before_install: gem install cocoapods
+before_script:
+    - chmod +x scripts/before_script.sh
+    - chmod +x scripts/add-key.sh
+    - chmod +x scripts/sign.sh
+    - chmod +x scripts/remove-key.sh
+    - scripts/before_script.sh
+   # - scripts/add-key.sh
+script:
+	- xctool -workspace TestTravisCI.xcworkspace -scheme TestTravisCI -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+	- xctool test -workspace TestTravisCI.xcworkspace -scheme TestTravisCI -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+	#- xctool -workspace TestTravisCI.xcworkspace -scheme TestTravisCI -sdk iphoneos -configuration Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
+after_success:
+    #- scripts/sign.sh
+after_script:
+	#- scripts/remove-key.sh
+env:
+  global:
+  - APP_NAME="TestTravisCI"
+  - 'DEVELOPER_NAME="iPhone Distribution: Alexandr Graschenkov (RE82W8HD52)"'
+  - PROFILE_NAME="AlexGraAdHoc"
+  - secure: JHKJKiCXJ5aUkR3sfI/rZJ2B3nYLZmCP9DehM3wIvb65Aq4dzheZlp8eaVN2UfPy3RoFvX4eEtICUaeALHcN4tcVEKrYByNQKpFokn19eFaoJSF6jwk7/0AaXfpFeW9Iso7XM6rTfcoX3qJYUetgTlLqgCmYfMo1do2COvw+XTI=
+  - secure: WoE/oVFIu/mMLobq+/AnxRxJxovxFbkmaDssc82kv21jes3jIIIX9GQr2c6zNd/uqcfEaveZyBUYjGjCx8miA02+0WYf9L9AnMTeCecp4NjE8oHET7EQm487t9xOeUHD0shmtx3avs5tD1svA0hCSqkatiOqV1eyIRWAC6qi78s=
