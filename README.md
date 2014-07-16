@@ -2,4 +2,3 @@ TestTravisCI
 ============
 
 Test project
-
