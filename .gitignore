@@ -8,4 +8,4 @@
 
 scripts/cert/dist.cer
 scripts/cert/dist.p12
-scripts/profile/AlexGraAdHoc.mobileprovision
+scripts/profile/*.mobileprovision
