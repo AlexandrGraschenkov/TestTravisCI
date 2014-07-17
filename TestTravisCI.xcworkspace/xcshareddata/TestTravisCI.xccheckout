@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>A7861F31-3F00-47ED-A38E-3BDFC9769D6A</string>
+	<string>9966FC43-8E33-4DD0-88D0-6ABD74D41801</string>
 	<key>IDESourceControlProjectName</key>
 	<string>TestTravisCI</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>E549E8FC-CA89-44AC-8E2F-359F4236A15C</key>
-		<string>https://github.com/Sk0rpion/TestTravisCI.git</string>
+		<key>8863DDD6-340A-4E2C-A49E-FA12CFDF49CA</key>
+		<string>https://github.com/AlexandrGraschenkov/TestTravisCI.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>TestTravisCI.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E549E8FC-CA89-44AC-8E2F-359F4236A15C</key>
+		<key>8863DDD6-340A-4E2C-A49E-FA12CFDF49CA</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Sk0rpion/TestTravisCI.git</string>
+	<string>https://github.com/AlexandrGraschenkov/TestTravisCI.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E549E8FC-CA89-44AC-8E2F-359F4236A15C</string>
+	<string>8863DDD6-340A-4E2C-A49E-FA12CFDF49CA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E549E8FC-CA89-44AC-8E2F-359F4236A15C</string>
+			<string>8863DDD6-340A-4E2C-A49E-FA12CFDF49CA</string>
 			<key>IDESourceControlWCCName</key>
 			<string>TestTravisCI</string>
 		</dict>
